@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block title %}Transactions | ATM Banking{% endblock %}
+{% block extracss%}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/viewtransactions.css') }}">
+{% endblock %}
+
+
+{% block content %}
+<h1>View Transactions</h1>
+
+    {% if history %}
+    <table>
+        <thead>
+            <tr>
+                <th>Transaction Id</th>
+                <th>Transaction Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in range(length) %}
+            <tr>
+                <td>{{ i + 1 }}</td>
+                <td>{{ history[i] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <button class="export-button" type="button" data-export-pdf>
+        Download Transactions
+    </button>
+    {% else %}
+    <p>No Transaction history</p>
+    {% endif %}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

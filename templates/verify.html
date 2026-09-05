@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}Verify OTP | ATM Banking{% endblock %}
+{% block extracss%}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/verify.css') }}">
+{% endblock %}
+
+
+{% block content %}
+ <h1>OTP Verification</h1>
+        <form method="post">
+            <label for="otp">Enter the otp: </label>
+            <input type="text" name="otp">
+            <input type="submit" value ='verify'>
+
+        </form>
+    
+        <h3>{{info}}</h3>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Forgot PIN | ATM Banking{% endblock %}
+{% block extracss%}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/forgotpin.css') }}">
+{% endblock %}
+
+
+{% block content %}
+
+<h1>Forgot Pin</h1>
+<p>Hello {{username}},</p>
+
+    <form method="post">
+    
+    <label for="email">Enter the email: </label>
+    <input type="email" name="email">
+
+    <input type="submit" value="Reset">
+
+    </form>
+
+    <h3>{{info}}</h3>
+{% endblock %}
+
+
+
+
+
+

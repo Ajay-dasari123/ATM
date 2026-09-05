@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard | ATM Banking{% endblock %}
+{% block extracss %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+{% endblock %}
+
+{% block content %}
+<h1>Welcome to the ATM</h1>
+<h2>Hello {{session['username']}}</h2>
+
+<div class="action-grid" aria-label="ATM services">
+    <a class="action-link balance-action" href="/checkBalance">Check Balance</a>
+    <a class="action-link deposit-action" href="/deposit">Deposit</a>
+    <a class="action-link withdraw-action" href="/withdraw">Withdraw</a>
+    <a class="action-link transactions-action" href="/viewtransactions">View Transactions</a>
+</div>
+{% endblock %}

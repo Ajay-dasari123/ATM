@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}Register | ATM Banking{% endblock %}
+{% block extracss%}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">
+{% endblock %}
+
+
+{% block content %}
+<h1>Register to the ATM</h1>
+    <form method="post">
+        <label for="uname">Username: </label>
+        <input type="text" name="uname">
+        <br><br>
+
+        <label for = 'email'>Enter the mail:</label>
+        <input type="email" name = 'email'>
+        <br><br>
+
+        <label for ='pin'>Enter the pin:</label>
+        <input type="password" name="pin">
+        <br><br>
+
+        <input type="submit" value="Register">
+        
+    </form>
+
+    <p>Already have account <a href="/login">login</a></p>
+
+    <h3>{{info}}</h3>
+{% endblock %}
+
+
+

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Reset PIN | ATM Banking{% endblock %}
+{% block extracss%}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/resetpin.css') }}">
+{% endblock %}
+
+
+{% block content %}
+<h1>Reset Pin</h1>
+    <form method="post">
+        <label for="npin">Enter the new pin:</label>
+        <input type="password" name="npin">
+
+        <label for="cpin">Confirm the new pin:</label>
+        <input type="password" name="cpin">
+
+        <input type="submit" value="Update">
+    </form>
+    
+    <h3>{{info}}</h3>
+        
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

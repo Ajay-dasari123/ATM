@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block title %}Login | ATM Banking{% endblock %}
+{% block extracss%}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+{% endblock %}
+
+
+{% block content %}
+
+ <h1>Login to the ATM</h1>
+    <form method="post">
+        <label for = 'email'>Enter the mail:</label>
+        <input type="email" name = 'email'>
+        <br><br>
+        <label for ='pin'>Enter the pin</label>
+        <input type="password" name="pin">
+        <br><br>
+        <input type="submit" value="Login">
+    </form>
+
+    <p><a href="/forgotpin">Forgot Pin?</a></p>
+    <p>New User? <a href="/register">Register</a></p>
+
+    {% if info %}
+    <h3 style="color: red;">{{info}}</h3>
+    {% endif %}
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login to the ATM</h1>
+    <form method="post">
+        <label for = 'email'>Enter the mail:</label>
+        <input type="email" name = 'email'>
+        <br><br>
+        <label for ='pin'>Enter the pin</label>
+        <input type="password" name="pin">
+        <br><br>
+        <input type="submit" value="Login">
+    </form>
+
+    <p><a href="/forgotpin">Forgot Pin?</a></p>
+    <p>New User? <a href="/register">Register</a></p>
+
+    <h3>{{info}}</h3>
+
+    
+</body>
+</html>

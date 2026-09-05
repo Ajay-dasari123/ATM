@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Withdraw | ATM Banking{% endblock %}
+{% block extracss %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/withdraw.css') }}">
+{% endblock %}
+
+{% block content %}
+<h1>Withdraw</h1>
+<form method="post">
+    <label for="amount">Enter the amount to withdraw:</label>
+    <input type="number" name="amount" required>
+    <input type="submit" value="Withdraw">
+</form>
+
+{% if info %}
+<h3 style="color: red;">{{info}}</h3>
+{% endif %}
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
